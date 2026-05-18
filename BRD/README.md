@@ -10,7 +10,7 @@ El trabajo de diseño en esta placa (Layout) se centró en los siguientes retos 
 * **Gestión Térmica y de Potencia:** Diseño de planos de cobre internos para una distribución eficiente de la energía (VDD/GND) y disipación térmica del controlador principal.
 
 ## Archivos incluidos
-* **`tarea1.brd`**: Archivo final de la placa de circuito impreso, listo para la generación de archivos de manufactura (Gerbers).
+* **`tarea1.brd`**: Archivo final de la placa de circuito impreso, listo para la generación de archivos de manufactura.
 
 ## Herramientas utilizadas
 * **OrCAD Allegro PCB Designer**: Utilizado para el *placement* de componentes, ruteo de pares diferenciales, definición de reglas de diseño (DRC) y manejo de planos de cobre.
