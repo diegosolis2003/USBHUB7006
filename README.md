@@ -62,27 +62,40 @@ El diseño está cimentado sobre el controlador **USB7006**, un IC hub orientado
            P1  P2   P3  P4   P5  P6
            (6x Puertos Downstream)
 ```
-El controlador USB7006 centraliza la comunicación SuperSpeed desde el puerto Upstream y la distribuye eficientemente hacia los 6 puertos Downstream de manera simultánea.
-Bloques principales del diseño
-•	Interfaz Upstream: Conexión principal tipo USB hacia el Host. Cuenta con protección contra descargas electrostáticas (ESD) y filtrado de ruido.
-•	Núcleo USB7006: El procesador central que negocia las velocidades y administra el tráfico de paquetes de datos.
-•	Interfaces Downstream (x6): Puertos de salida enrutados meticulosamente para mantener la impedancia diferencial necesaria para la transferencia a 5Gbps.
-•	Arquitectura de potencia: Red de distribución de energía (PDN) diseñada para soportar el consumo simultáneo de los 6 puertos, incorporando reguladores de voltaje eficientes y capacitores de desacoplo estratégicamente posicionados.
-•	Circuito de reloj (Clocking): Oscilador de cristal de precisión requerido por el PHY del USB7006 para la temporización de los datos.
-Filosofía de diseño
+*El controlador USB7006 centraliza la comunicación SuperSpeed desde el puerto Upstream y la distribuye eficientemente hacia los 6 puertos Downstream de manera simultánea.*
+
+## Bloques principales del diseño
+
+* **Interfaz Upstream:** Conexión principal tipo USB hacia el Host. Cuenta con protección contra descargas electrostáticas (ESD) y filtrado de ruido.
+* **Núcleo USB7006:** El procesador central que negocia las velocidades y administra el tráfico de paquetes de datos.
+* **Interfaces Downstream (x6):** Puertos de salida enrutados meticulosamente para mantener la impedancia diferencial necesaria para la transferencia a 5Gbps.
+* **Arquitectura de potencia:** Red de distribución de energía (PDN) diseñada para soportar el consumo simultáneo de los 6 puertos, incorporando reguladores de voltaje eficientes y capacitores de desacoplo estratégicamente posicionados.
+* **Circuito de reloj (Clocking):** Oscilador de cristal de precisión requerido por el PHY del USB7006 para la temporización de los datos.
+
+## Filosofía de diseño
+
 A diferencia de proyectos puramente académicos, este desarrollo se enfocó desde el día uno en un enfoque comercial y de producto final.
-•	Densidad: Minimizar el espacio en la PCB (.brd) para lograr un chasis pequeño.
-•	Integridad de Señal (SI): El ruteo de pares diferenciales fue la máxima prioridad para evitar reflexiones, atenuación y crosstalk a frecuencias de 5Gbps.
-•	Confiabilidad: Inclusión de protecciones ESD y manejo térmico adecuado.
-Herramientas utilizadas
-•	Capture CIS de OrCAD (Esquemáticos - .dsn)
-•	OrCAD Allegro (Diseño de PCB - .brd)
-•	Datasheets y Application Notes de la familia USB7006
-Estado actual
-El proyecto se encuentra 100% completado y funcional.
+
+* **Densidad:** Minimizar el espacio en la PCB (`.brd`) para lograr un chasis pequeño.
+* **Integridad de Señal (SI):** El ruteo de pares diferenciales fue la máxima prioridad para evitar reflexiones, atenuación y *crosstalk* a frecuencias de 5Gbps.
+* **Confiabilidad:** Inclusión de protecciones ESD y manejo térmico adecuado.
+
+## Herramientas utilizadas
+
+* Capture CIS de OrCAD (Esquemáticos - `.dsn`)
+* OrCAD Allegro (Diseño de PCB - `.brd`)
+* Datasheets y Application Notes de la familia USB7006
+
+## Estado actual
+
+El proyecto se encuentra **100% completado y funcional**.
+
 Se entregan los archivos finales de captura esquemática y el diseño de la placa. Este proyecto representó una curva de aprendizaje sumamente valiosa, destacando los siguientes logros técnicos:
-•	Dominio del ruteo de Alta Velocidad (High-Speed): Se logró un entendimiento profundo sobre el cálculo de impedancias y el trazado de señales SuperSpeed.
-•	Manejo de Pares Diferenciales: Aprendizaje práctico en la igualación de longitudes (length matching), control de fase y separación (spacing) estricta para las líneas TX y RX del estándar USB 3.2.
-•	Diseño para Manufactura: Transición exitosa de un concepto teórico a una placa lista para producción masiva.
-Notas
-Este repositorio contiene la versión final del proyecto. Los archivos .dsn y .brd pueden ser abiertos e inspeccionados con la suite de herramientas de diseño de Cadence. Se recomienda revisar detenidamente el ruteo de las capas internas para analizar las técnicas de High-Speed implementadas.
+
+* **Dominio del ruteo de Alta Velocidad (High-Speed):** Se logró un entendimiento profundo sobre el cálculo de impedancias y el trazado de señales SuperSpeed.
+* **Manejo de Pares Diferenciales:** Aprendizaje práctico en la igualación de longitudes (length matching), control de fase y separación (spacing) estricta para las líneas TX y RX del estándar USB 3.2.
+* **Diseño para Manufactura:** Transición exitosa de un concepto teórico a una placa lista para producción masiva.
+
+## Notas
+
+Este repositorio contiene la versión final del proyecto. Los archivos `.dsn` y `.brd` pueden ser abiertos e inspeccionados con la suite de herramientas de diseño de Cadence. Se recomienda revisar detenidamente el ruteo de las capas internas para analizar las técnicas de High-Speed implementadas.
