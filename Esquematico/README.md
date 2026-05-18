@@ -6,7 +6,7 @@ Esta carpeta contiene la versión en formato PDF del esquemático completo del H
 El propósito de este archivo es facilitar una visualización rápida, impresión y revisión del diseño de manera accesible, permitiendo la consulta de la lógica del circuito sin necesidad de abrir herramientas de CAD especializadas como OrCAD Capture.
 
 ## Archivos incluidos
-* **`Esquematico.pdf`** (o equivalente): Documento PDF en alta resolución que compila todas las páginas del diagrama esquemático. Está exportado de manera que se mantiene la nitidez de los símbolos, etiquetas de red (*net names*) y texto técnico para una navegación cómoda.
+* **`Esquematico.pdf`** : Documento PDF en alta resolución que compila todas las páginas del diagrama esquemático. Está exportado de manera que se mantiene la nitidez de los símbolos, etiquetas de red (*net names*) y texto técnico para una navegación cómoda.
 
 ## Secciones críticas disponibles para revisión rápida
 Al consultar este documento, se pueden auditar visualmente los siguientes bloques de ingeniería:
